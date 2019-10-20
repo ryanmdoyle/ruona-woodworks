@@ -3,16 +3,33 @@ import styled from '@emotion/styled';
 
 const HeaderStyled = styled.header`
   padding: 0 1rem;
-  background-color: #f5f5f5;
   display: flex;
+  .inner {
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .links {
+    display: flex;
+    align-items: center;
+  }
+  .links > h2 {
+    margin: 0 1rem;
+  }
 `;
 
 const Header = ({title}) => {
   return (
     <HeaderStyled>
-      <h1>{title}</h1>
-      <h2>Link 1</h2>
-      <h2>Link 3s</h2>
+      <div className='inner'>
+        <h1>{title}</h1>
+        <div className='links'>
+          <h2>Link 1</h2>
+          <h2>Link 2</h2>
+        </div>
+      </div>
     </HeaderStyled>
   );
 };

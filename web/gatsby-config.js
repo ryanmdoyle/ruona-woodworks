@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Ruona Woodworks`,
+    title: `RW`,
     description: `Portfolio for woodowrking projects of Kyle Ruona.`,
     author: `Ryan M Doyle`,
   },
@@ -16,6 +16,12 @@ module.exports = {
       },
     },
     'gatsby-plugin-emotion',
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `ruonawoodworks`,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

@@ -8,14 +8,21 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from '@emotion/styled';
+import { Global, css } from '@emotion/core';
 
 import Header from "./Header"
 import "./normalize.css"
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 
+const GlobalStyles = css`
+  html {
+    font-family: sans-serif;
+  }
+`;
+
 const InnerContent = styled.div`
   margin: 0 auto;
-  max-width: 960;
+  max-width: 960px;
   padding: 1rem;
   box-sizing: border-box;
 `;
@@ -25,6 +32,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Global styles={GlobalStyles} />
       <Header title={title} />
       <InnerContent>{children}</InnerContent>
     </>
